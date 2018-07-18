@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/scanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扫描"/>
+
+    <Button
+        android:id="@+id/createTwoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="生成二维码"
+        app:layout_constraintLeft_toRightOf="@id/scanButton"/>
+
+    <Button
+        android:id="@+id/createStripeCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="生成条形码"
+        app:layout_constraintLeft_toRightOf="@id/createTwoCode"/>
+
+    <Button
+        android:id="@+id/scanLocalPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="识别图中二维码"
+        app:layout_constraintTop_toBottomOf="@id/scanButton"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        android:text=""
+        android:textSize="22sp"
+        android:textColor="#555555"
+        android:lineSpacingExtra="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createStripeCode"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorOrange"/>
+
+</android.support.constraint.ConstraintLayout>
