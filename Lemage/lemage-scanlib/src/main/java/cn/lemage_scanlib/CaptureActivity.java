@@ -177,6 +177,7 @@ public class CaptureActivity extends AppCompatActivity implements SurfaceHolder.
     }
 
     private void initViewNew() {
+        
         // 根布局
         rootLayout = new RelativeLayout(this);
         RelativeLayout.LayoutParams layoutParamsRoot = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
